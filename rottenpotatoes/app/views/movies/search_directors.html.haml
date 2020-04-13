@@ -1,0 +1,16 @@
+%h2 Movies with the same director
+%table#movies
+    %thead
+        %tr
+            %th Movied Title
+            %th Rating
+            %th Release Date
+            %th More Info
+    %tbody
+        - @movies.each do |movie|
+            %tr
+                %td= movie.title
+                %td= movie.rating
+                %td= movie.release_date
+
+                %td= link_to "Back", movie_path  
